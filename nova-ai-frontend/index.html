@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10131d"><meta name="description" content="Nova AI — Your AI. Your World.">
+  <link rel="manifest" href="./manifest.webmanifest"><link rel="stylesheet" href="./styles.css">
+  <title>Nova AI — Your AI. Your World.</title>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-mark">✦</div><div><strong>Nova AI</strong><small>Your AI. Your World.</small></div></div>
+    <button class="new-chat" id="newChatBtn">＋ <span>New chat</span></button>
+    <div class="side-label">YOUR CHATS</div><div id="conversationList" class="conversation-list"><p class="muted small">Sign in to see your chats.</p></div>
+    <div class="sidebar-bottom">
+      <button class="nav-item" data-view="profile">◉ <span>Profile & settings</span></button>
+      <button class="nav-item" data-view="vip">✧ <span>Nova VIP</span><span class="vip-tag">SOON</span></button>
+      <button class="nav-item" id="signOutBtn">↪ <span>Sign out</span></button>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button class="icon-btn mobile-only" id="menuBtn" aria-label="Open menu">☰</button><div class="top-brand mobile-only">✦ Nova AI</div><div class="top-spacer"></div><span class="status-dot"></span><span class="status-text">AI ready</span></header>
+    <section id="authView" class="auth-wrap">
+      <div class="auth-card"><div class="hero-mark">✦</div><p class="eyebrow">YOUR AI. YOUR WORLD.</p><h1>Welcome to <span>Nova AI</span></h1><p class="muted">A space to think, create, learn and get things done.</p>
+        <div class="auth-tabs"><button id="loginTab" class="active" type="button">Log in</button><button id="signupTab" type="button">Create account</button></div>
+        <form id="authForm"><label for="email">Email address</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com" required><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" minlength="6" placeholder="At least 6 characters" required><button class="primary-btn full" id="authSubmit" type="submit">Log in</button></form>
+        <p id="authMessage" class="form-message" role="status"></p><p class="fine-print">By continuing, you agree to use Nova AI responsibly.</p>
+      </div>
+    </section>
+    <section id="chatView" class="chat-view hidden">
+      <div id="welcome" class="welcome"><div class="hero-mark small-mark">✦</div><p class="eyebrow">A NEW WAY TO GET THINGS DONE</p><h1>What can I help you with?</h1><p class="muted">Ask a question, explore an idea, or start creating.</p>
+        <div class="prompt-grid">
+          <button class="prompt-card" data-prompt="Help me make a clear plan for my goals."><b>◎ Make a plan</b><span>Turn an idea into steps</span></button>
+          <button class="prompt-card" data-prompt="Explain a difficult topic in simple words."><b>✧ Learn something</b><span>Understand it more easily</span></button>
+          <button class="prompt-card" data-prompt="Help me write a polished message."><b>✎ Write with me</b><span>Draft and improve your words</span></button>
+          <button class="prompt-card" data-prompt="Give me creative ideas for a project."><b>◇ Get creative</b><span>Explore fresh possibilities</span></button>
+        </div>
+      </div>
+      <div id="messages" class="messages hidden" aria-live="polite"></div>
+      <div class="composer-area"><form id="chatForm" class="composer"><textarea id="messageInput" rows="1" maxlength="12000" placeholder="Message Nova AI..." aria-label="Message Nova AI"></textarea><button id="sendBtn" class="send-btn" type="submit" aria-label="Send message">↑</button></form><p class="disclaimer">Nova AI can make mistakes. Check important information.</p></div>
+    </section>
+    <section id="profileView" class="content-view hidden"><p class="eyebrow">YOUR ACCOUNT</p><h1>Profile & settings</h1><div class="setting-card"><span class="setting-icon">◉</span><div><b>Signed in as</b><p id="profileEmail" class="muted"></p></div></div><div class="setting-card"><span class="setting-icon">✦</span><div><b>Nova AI</b><p class="muted">Your AI. Your World.</p></div></div><button class="secondary-btn" id="profileSignOut">Sign out</button></section>
+    <section id="vipView" class="content-view hidden"><div class="vip-hero"><div class="hero-mark">✧</div><p class="eyebrow">GO FURTHER WITH NOVA</p><h1>Nova <span>VIP</span></h1><p class="muted">More ways to create, explore and get things done.</p></div><div class="setting-card"><div><b>VIP plans are coming soon</b><p class="muted">Subscriptions and payments are not active yet. Secure checkout will be added before accepting payments.</p></div></div><button class="secondary-btn" data-back-chat>Back to chat</button></section>
+  </main>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script type="module" src="./app.js"></script>
+</body></html>

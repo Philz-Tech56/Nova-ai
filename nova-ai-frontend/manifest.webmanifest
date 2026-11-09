@@ -1,0 +1,9 @@
+{
+  "name": "Nova AI",
+  "short_name": "Nova AI",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#10131d",
+  "theme_color": "#10131d",
+  "description": "Your AI. Your World."
+}
